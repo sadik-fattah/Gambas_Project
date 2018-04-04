@@ -1,0 +1,79 @@
+' Gambas class file
+
+Public worl As String
+Public reversing As String
+Public langx As Integer
+   
+Public Sub Form_Open()
+
+  Me.Center
+  Me.title = "Revers Word"
+ 
+End
+
+Public Sub Button_Revers_Click()
+
+  Dim blabla As String
+  Dim accounting As Integer
+
+  If TextBox_put.Text = Null Then
+    Message.Info("No a ingresado texto")
+    TextBox_put.SetFocus
+  Else
+
+  worl = TextBox_put.Text
+  langx = Len(worl)
+
+  For accounting = langx To 1 Step -1
+    reversing = Mid$(worl, accounting, 1)
+    blabla &= reversing
+    TextBox_out.Text = blabla
+  Next
+  Endif
+End
+
+Public Sub CheckBox_lang_Click()
+
+  If CheckBox_lang.Value = -1 Then
+  
+
+   Button_clear.Caption = "&clear"
+   Button_Revers.caption = "&Reverset" 
+    Me.title = "Revers Word for photoshop"
+   
+   TextBox_out.Alignment = 0
+   TextBox_put.Alignment = 0 
+   
+   Else
+   Button_clear.Caption = "محو الكل"
+   Button_Revers.caption = "عكس النص" 
+   Me.title = "عكس النص للفوتوشوب"
+   TextBox_out.Alignment = 1
+   TextBox_put.Alignment = 1 
+   
+ Endif
+
+End
+
+Public Sub Button_clear_Click()
+
+    TextBox_out.Clear()
+   TextBox_put.Clear()
+
+End
+
+
+
+
+
+Public Sub URLLabel1_Click()
+
+Shell "chrome https://github.com/sadik-fattah"
+
+End
+
+
+
+
+
+

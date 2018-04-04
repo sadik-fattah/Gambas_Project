@@ -1,0 +1,38 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,68,39)
+  { TextBox_put TextBox
+    MoveScaled(2,1,62,10)
+    Font = Font["Bold"]
+    Background = Color.Background
+    Foreground = Color.Black
+    Drop = True
+    Alignment = Align.Right
+  }
+  { Button_Revers Button
+    MoveScaled(2,12,29,6)
+    Text = ("تغيير النص")
+  }
+  { Button_clear Button
+    MoveScaled(37,12,27,6)
+    Text = ("محو الكل")
+  }
+  { TextBox_out TextBox
+    MoveScaled(3,20,61,11)
+    Font = Font["Bold"]
+    Background = Color.ButtonBackground
+    Drop = True
+    Alignment = Align.Right
+    ReadOnly = True
+  }
+  { CheckBox_lang CheckBox
+    MoveScaled(4,33,24,4)
+    Font = Font["Bold"]
+    Text = Shortcut(("English Translate"), "E")
+  }
+  { URLLabel1 URLLabel
+    MoveScaled(32,34,24,4)
+    Text = ("Follow me IN github")
+  }
+}
